@@ -119,11 +119,11 @@
 
 /* Mobile Layout */
 @media (max-width: 600px) {
-  .g-block3-section {
+  .block3-section {
     padding: 3rem 1rem;
   }
 
-  .g-block3-grid {
+  .block3-grid {
     gap: 2rem;
   }
 
@@ -138,14 +138,14 @@
     margin: 0;
   }
 
-  .g-info-box {
+  .info-box {
     padding: 1.25rem 1.75rem;
     max-width: 100%;
     width: 100%;
     margin: 0;
   }
 
-  .g-info-icon {
+  .info-icon {
     font-size: 28px !important;
     margin-right: 0.75rem;
   }

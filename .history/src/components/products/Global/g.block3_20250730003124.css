@@ -1,24 +1,24 @@
-.g-block3-section {
+.block3-section {
   padding: 6rem 20px;
   width: 100%;
   box-sizing: border-box;
   background-color: rgb(236, 243, 249);
 }
 
-.g-block3-container {
+.block3-container {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.g-block3-grid {
+.block3-grid {
   display: flex;
   flex-direction: column;
   gap: 3rem;
   width: 100%;
 }
 
-.g-block3-row-1 {
+.block3-row-1 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
@@ -26,7 +26,7 @@
   margin-bottom: 2rem;
 }
 
-.g-block3-row-2 {
+.block3-row-2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
@@ -34,7 +34,7 @@
   margin: 0 auto;
 }
 
-.g-info-box {
+.info-box {
   background-color: #ffffff;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
@@ -50,18 +50,18 @@
   transform: translateY(50px);
 }
 
-.g-info-box.animate {
+.info-box.animate {
   opacity: 1;
   transform: translateY(0);
 }
 
-.g-info-box:hover {
+.info-box:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-.g-info-box:nth-child(4),
-.g-info-box:nth-child(5) {
+.info-box:nth-child(4),
+.info-box:nth-child(5) {
   grid-column: span 1.5;
 }
 
@@ -69,6 +69,10 @@
   font-size: 30px !important;
   color: #64b5f6 !important;
   margin-bottom: 1rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
 .g-info-title {
@@ -76,9 +80,11 @@
   font-weight: 600 !important;
   color: #333;
   margin-bottom: 1rem !important;
+  text-align: center;
+  width: 100%;
 }
 
-.g-info-description {
+.info-description {
   color: #666;
   line-height: 1.6;
   font-size: 1rem;
@@ -88,30 +94,30 @@
 
 /* Tablet Layout */
 @media (max-width: 960px) {
-  .g-block3-section {
+  .block3-section {
     padding: 4rem 1.5rem;
   }
 
-  .g-block3-grid {
+  .block3-grid {
     gap: 2rem;
   }
 
-  .g-block3-row-1 {
+  .block3-row-1 {
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
   }
 
-  .g-block3-row-2 {
+  .block3-row-2 {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
     max-width: 800px;
   }
 
-  .g-info-box {
+  .info-box {
     padding: 1.5rem;
   }
 
-  .g-info-icon {
+  .info-icon {
     font-size: 40px !important;
     margin-bottom: 1rem;
   }
@@ -119,15 +125,15 @@
 
 /* Mobile Layout */
 @media (max-width: 600px) {
-  .g-block3-section {
+  .block3-section {
     padding: 3rem 1rem;
   }
 
-  .g-block3-grid {
+  .block3-grid {
     gap: 2rem;
   }
 
-  .g-block3-row-1, .g-block3-row-2 {
+  .block3-row-1, .block3-row-2 {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -138,24 +144,24 @@
     margin: 0;
   }
 
-  .g-info-box {
+  .info-box {
     padding: 1.25rem 1.75rem;
     max-width: 100%;
     width: 100%;
     margin: 0;
   }
 
-  .g-info-icon {
+  .info-icon {
     font-size: 28px !important;
     margin-right: 0.75rem;
   }
 
-  .g-info-title {
+  .info-title {
     font-size: 1rem !important;
     margin: 0 !important;
   }
 
-  .g-info-description {
+  .info-description {
     font-size: 0.9rem;
     margin-top: 0.75rem;
     width: 100%;

@@ -88,30 +88,30 @@
 
 /* Tablet Layout */
 @media (max-width: 960px) {
-  .g-block3-section {
+  .block3-section {
     padding: 4rem 1.5rem;
   }
 
-  .g-block3-grid {
+  .block3-grid {
     gap: 2rem;
   }
 
-  .g-block3-row-1 {
+  .block3-row-1 {
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
   }
 
-  .g-block3-row-2 {
+  .block3-row-2 {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
     max-width: 800px;
   }
 
-  .g-info-box {
+  .info-box {
     padding: 1.5rem;
   }
 
-  .g-info-icon {
+  .info-icon {
     font-size: 40px !important;
     margin-bottom: 1rem;
   }
@@ -119,15 +119,15 @@
 
 /* Mobile Layout */
 @media (max-width: 600px) {
-  .g-block3-section {
+  .block3-section {
     padding: 3rem 1rem;
   }
 
-  .g-block3-grid {
+  .block3-grid {
     gap: 2rem;
   }
 
-  .g-block3-row-1, .g-block3-row-2 {
+  .block3-row-1, .block3-row-2 {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -138,24 +138,24 @@
     margin: 0;
   }
 
-  .g-info-box {
+  .info-box {
     padding: 1.25rem 1.75rem;
     max-width: 100%;
     width: 100%;
     margin: 0;
   }
 
-  .g-info-icon {
+  .info-icon {
     font-size: 28px !important;
     margin-right: 0.75rem;
   }
 
-  .g-info-title {
+  .info-title {
     font-size: 1rem !important;
     margin: 0 !important;
   }
 
-  .g-info-description {
+  .info-description {
     font-size: 0.9rem;
     margin-top: 0.75rem;
     width: 100%;

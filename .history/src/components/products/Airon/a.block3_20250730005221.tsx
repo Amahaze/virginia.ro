@@ -52,32 +52,32 @@ const Block3: React.FC = () => {
               </Typography>
             </Box>
             
-            <Box className="a-info-box" ref={(el: HTMLDivElement | null): void => { infoBoxRefs.current[1] = el; }}>
-              <LanguageIcon className="a-info-icon" />
-              <Typography variant="h6" className="a-info-title">
+            <Box className="info-box" ref={(el: HTMLDivElement | null): void => { infoBoxRefs.current[1] = el; }}>
+              <LanguageIcon className="info-icon" />
+              <Typography variant="h6" className="info-title">
                 {t('airon.block3.extreme_environments.title')}
               </Typography>
             </Box>
             
-            <Box className="a-info-box" ref={(el: HTMLDivElement | null): void => { infoBoxRefs.current[2] = el; }}>
-              <VerifiedIcon className="a-info-icon" />
-              <Typography variant="h6" className="a-info-title">
+            <Box className="info-box" ref={(el: HTMLDivElement | null): void => { infoBoxRefs.current[2] = el; }}>
+              <VerifiedIcon className="info-icon" />
+              <Typography variant="h6" className="info-title">
                 {t('airon.block3.oxygen_purity.title')}
               </Typography>
             </Box>
           </Box>
 
           <Box className="a-block3-row-2">
-            <Box className="a-info-box" ref={(el: HTMLDivElement | null): void => { infoBoxRefs.current[3] = el; }}>
-              <BoltIcon className="a-info-icon" />
-              <Typography variant="h6" className="a-info-title">
+            <Box className="info-box" ref={(el: HTMLDivElement | null): void => { infoBoxRefs.current[3] = el; }}>
+              <BoltIcon className="info-icon" />
+              <Typography variant="h6" className="info-title">
                 {t('airon.block3.energy_efficiency.title')}
               </Typography>
             </Box>
             
-            <Box className="a-info-box" ref={(el: HTMLDivElement | null): void => { infoBoxRefs.current[4] = el; }}>
-              <SettingsSuggestIcon className="a-info-icon" />
-              <Typography variant="h6" className="a-info-title">
+            <Box className="info-box" ref={(el: HTMLDivElement | null): void => { infoBoxRefs.current[4] = el; }}>
+              <SettingsSuggestIcon className="info-icon" />
+              <Typography variant="h6" className="info-title">
                 {t('airon.block3.modular_systems.title')}
               </Typography>
             </Box>

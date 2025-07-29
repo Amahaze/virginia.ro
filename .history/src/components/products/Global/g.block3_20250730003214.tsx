@@ -52,44 +52,44 @@ const Block3: React.FC = () => {
               </Typography>
             </Box>
             
-            <Box className="g-info-box" ref={(el: HTMLDivElement | null): void => { infoBoxRefs.current[1] = el; }}>
-              <SecurityIcon className="g-info-icon" />
-              <Typography variant="h6" className="g-info-title">
+            <Box className="info-box" ref={(el: HTMLDivElement | null): void => { infoBoxRefs.current[1] = el; }}>
+              <SecurityIcon className="info-icon" />
+              <Typography variant="h6" className="info-title">
                 {t('block3.container2.title')}
               </Typography>
-              <Typography className="g-info-description">
+              <Typography className="info-description">
                 {t('block3.container2.description')}
               </Typography>
             </Box>
             
-            <Box className="g-info-box" ref={(el: HTMLDivElement | null): void => { infoBoxRefs.current[2] = el; }}>
-              <AirplanemodeActiveIcon className="g-info-icon" />
-              <Typography variant="h6" className="g-info-title">
+            <Box className="info-box" ref={(el: HTMLDivElement | null): void => { infoBoxRefs.current[2] = el; }}>
+              <AirplanemodeActiveIcon className="info-icon" />
+              <Typography variant="h6" className="info-title">
                 {t('block3.container3.title')}
               </Typography>
-              <Typography className="g-info-description">
+              <Typography className="info-description">
                 {t('block3.container3.description')}
               </Typography>
             </Box>
           </Box>
 
           <Box className="g-block3-row-2">
-            <Box className="g-info-box" ref={(el: HTMLDivElement | null): void => { infoBoxRefs.current[3] = el; }}>
-              <BoltIcon className="g-info-icon" />
-              <Typography variant="h6" className="g-info-title">
+            <Box className="info-box" ref={(el: HTMLDivElement | null): void => { infoBoxRefs.current[3] = el; }}>
+              <BoltIcon className="info-icon" />
+              <Typography variant="h6" className="info-title">
                 {t('block3.container4.title')}
               </Typography>
-              <Typography className="g-info-description">
+              <Typography className="info-description">
                 {t('block3.container4.description')}
               </Typography>
             </Box>
             
-            <Box className="g-info-box" ref={(el: HTMLDivElement | null): void => { infoBoxRefs.current[4] = el; }}>
-              <BuildIcon className="g-info-icon" />
-              <Typography variant="h6" className="g-info-title">
+            <Box className="info-box" ref={(el: HTMLDivElement | null): void => { infoBoxRefs.current[4] = el; }}>
+              <BuildIcon className="info-icon" />
+              <Typography variant="h6" className="info-title">
                 {t('block3.container5.title')}
               </Typography>
-              <Typography className="g-info-description">
+              <Typography className="info-description">
                 {t('block3.container5.description')}
               </Typography>
             </Box>
