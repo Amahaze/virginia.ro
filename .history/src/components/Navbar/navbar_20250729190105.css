@@ -1,0 +1,218 @@
+@keyframes fadeInFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5px;
+  background-color: rgb(236, 243, 249);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  animation: fadeInFromTop 0.8s ease-out forwards;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-right: 2rem;
+}
+
+.logo img {
+  height: 40px;
+  width: auto;
+}
+
+.logo span {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  margin-left: 0;
+}
+
+.nav-links .MuiButton-root.nav-link {
+  color: #666 !important;
+  font-weight: 500 !important;
+  transition: all 0.2s ease !important;
+  font-size: 1rem !important;
+  min-width: unset !important;
+  line-height: normal !important;
+  margin: 0 !important;
+  padding: 0.5rem 1rem !important;
+}
+
+.nav-links .MuiButton-root.nav-link:hover {
+  color: #000 !important;
+  transform: scale(1.05) !important;
+  background: none !important;
+}
+
+.nav-links .MuiButton-root.nav-link.active {
+  color: #000 !important;
+  font-weight: 700 !important;
+}
+
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.lang-button {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.5rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.lang-text {
+  font-size: 1rem;
+  color: #000;
+  font-weight: 500;
+}
+
+.flag-icon {
+  display: flex;
+  align-items: center;
+  margin-right: 0.25rem;
+}
+
+.flag-icon img {
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+
+.contact-button {
+  background-color: #000 !important;
+  color: #fff !important;
+  border: none !important;
+  text-transform: none !important;
+  padding: 0.5rem 1.5rem !important;
+  border-radius: 25px !important;
+  font-size: 1rem !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+  min-width: 120px !important;
+  margin-left: 1rem !important;
+}
+
+.contact-button:hover {
+  background-color: white !important;
+  color: black !important;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-menu-button {
+  display: none !important;
+}
+
+@media (max-width: 960px) {
+  .nav-links {
+    gap: 1.5rem;
+    margin-left: 2rem;
+  }
+
+  .logo img {
+    height: 28px;
+  }
+
+  .logo span {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav-links {
+    display: none;
+  }
+
+  .mobile-menu-button {
+    display: block !important;
+  }
+
+  .toolbar {
+    padding: 0.5rem 1rem;
+  }
+
+  .logo img {
+    height: 24px;
+  }
+
+  .logo span {
+    display: none;
+  }
+
+  .lang-text {
+    display: none;
+  }
+
+  .MuiMenu-paper .MuiMenuItem-root.mobile-nav-link {
+  padding: 1rem 1.5rem !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+  font-weight: normal !important;
+  transition: all 0.2s ease !important;
+  color: #666 !important;
+  min-width: unset !important;
+  position: relative !important;
+}
+
+  .MuiMenu-paper .MuiMenuItem-root.mobile-nav-link::after {
+  content: '' !important;
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 1.5rem !important;
+  width: 0 !important;
+  height: 2px !important;
+  background-color: #000 !important;
+  transition: width 0.2s ease !important;
+}
+
+.MuiMenu-paper .MuiMenuItem-root.mobile-nav-link:hover::after,
+.MuiMenu-paper .MuiMenuItem-root.mobile-nav-link.active::after {
+  width: calc(100% - 3rem) !important;
+}
+
+.MuiMenu-paper .MuiMenuItem-root.mobile-nav-link:hover {
+  background-color: transparent !important;
+  color: #000 !important;
+}
+
+  .MuiMenu-paper .MuiMenuItem-root.mobile-nav-link.active {
+    font-weight: 700 !important;
+    color: #000 !important;
+  }
+
+  .MuiMenu-paper .contact-button {
+    margin: 3rem 1rem 1.5rem !important;
+    height: 40px !important;
+    background-color: #002B5B !important;
+    padding: 0 15px !important;
+    min-width: unset !important;
+    width: auto !important;
+  }
+
+  .MuiMenu-paper .contact-button:hover {
+    background-color: white !important;
+    color: black !important;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+  }
+}

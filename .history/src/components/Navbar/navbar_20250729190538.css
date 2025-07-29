@@ -1,0 +1,195 @@
+@keyframes fadeInFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: rgb(236, 243, 249);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  animation: fadeInFromTop 0.8s ease-out forwards;
+  height: 80px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo img {
+  height: 45px;
+  width: auto;
+}
+
+.logo span {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #000;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.nav-links .MuiButton-root.nav-link {
+  color: #666 !important;
+  font-weight: 500 !important;
+  transition: all 0.2s ease !important;
+  font-size: 1.1rem !important;
+  padding: 0.5rem 1rem !important;
+  text-transform: none !important;
+}
+
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.language-buttons {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.lang-button {
+  color: #666 !important;
+  font-weight: 500 !important;
+  font-size: 1rem !important;
+  min-width: unset !important;
+  padding: 0.25rem 0.5rem !important;
+}
+
+.lang-button.active {
+  color: #000 !important;
+  font-weight: 700 !important;
+}
+
+.contact-button {
+  background-color: #000 !important;
+  color: #fff !important;
+  border: none !important;
+  text-transform: none !important;
+  padding: 0.75rem 2rem !important;
+  border-radius: 25px !important;
+  font-size: 1.1rem !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+  min-width: 130px !important;
+}
+
+.contact-button:hover {
+  background-color: white !important;
+  color: black !important;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-menu-button {
+  display: none !important;
+}
+
+@media (max-width: 960px) {
+  .nav-links {
+    gap: 1.5rem;
+    margin-left: 2rem;
+  }
+
+  .logo img {
+    height: 28px;
+  }
+
+  .logo span {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav-links {
+    display: none;
+  }
+
+  .mobile-menu-button {
+    display: block !important;
+  }
+
+  .toolbar {
+    padding: 0.5rem 1rem;
+  }
+
+  .logo img {
+    height: 24px;
+  }
+
+  .logo span {
+    display: none;
+  }
+
+  .lang-text {
+    display: none;
+  }
+
+  .MuiMenu-paper .MuiMenuItem-root.mobile-nav-link {
+  padding: 1rem 1.5rem !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+  font-weight: normal !important;
+  transition: all 0.2s ease !important;
+  color: #666 !important;
+  min-width: unset !important;
+  position: relative !important;
+}
+
+  .MuiMenu-paper .MuiMenuItem-root.mobile-nav-link::after {
+  content: '' !important;
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 1.5rem !important;
+  width: 0 !important;
+  height: 2px !important;
+  background-color: #000 !important;
+  transition: width 0.2s ease !important;
+}
+
+.MuiMenu-paper .MuiMenuItem-root.mobile-nav-link:hover::after,
+.MuiMenu-paper .MuiMenuItem-root.mobile-nav-link.active::after {
+  width: calc(100% - 3rem) !important;
+}
+
+.MuiMenu-paper .MuiMenuItem-root.mobile-nav-link:hover {
+  background-color: transparent !important;
+  color: #000 !important;
+}
+
+  .MuiMenu-paper .MuiMenuItem-root.mobile-nav-link.active {
+    font-weight: 700 !important;
+    color: #000 !important;
+  }
+
+  .MuiMenu-paper .contact-button {
+    margin: 3rem 1rem 1.5rem !important;
+    height: 40px !important;
+    background-color: #002B5B !important;
+    padding: 0 15px !important;
+    min-width: unset !important;
+    width: auto !important;
+  }
+
+  .MuiMenu-paper .contact-button:hover {
+    background-color: white !important;
+    color: black !important;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+  }
+}

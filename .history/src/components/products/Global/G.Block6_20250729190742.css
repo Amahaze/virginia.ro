@@ -1,0 +1,208 @@
+.block6-container {
+  padding: 5rem 0;
+  width: 100%;
+  min-height: auto;
+  background-color: rgb(236, 243, 249);
+}
+
+.block6-form-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+  min-height: auto;
+  position: relative;
+}
+
+.block6-form-content {
+  width: 100%;
+  max-width: 800px;
+  padding: 4rem;
+  background-color: rgb(236, 243, 249);
+}
+
+.block6-title {
+  font-size: 2.5rem !important;
+  font-weight: 600 !important;
+  color: #333 !important;
+  margin-bottom: 1.5rem !important;
+}
+
+.block6-subtitle {
+  font-size: 1.1rem !important;
+  color: #666 !important;
+  margin-bottom: 2.5rem !important;
+  line-height: 1.6 !important;
+}
+
+.block6-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.form-field {
+  margin-bottom: 0 !important;
+}
+
+.phone-field-container {
+  display: flex;
+  gap: 0;
+}
+
+.phone-prefix {
+  width: 150px;
+}
+
+.phone-input {
+  flex: 1;
+}
+
+.message-field {
+  margin-bottom: 1rem !important;
+}
+
+.submit-button {
+  align-self: flex-start;
+  min-width: 200px;
+  background-color: black !important;
+  color: white !important;
+  border: 2px solid black !important;
+  padding: 0.8rem 2rem !important;
+  font-size: 1rem !important;
+  border-radius: 5px !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+}
+
+.submit-button:hover {
+  background-color: white !important;
+  color: black !important;
+}
+
+.block6-illustration {
+  width: 50%;
+  background-image: url('../../../assets/flaore.png') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  position: relative !important;
+  z-index: 1 !important;
+  min-height: 600px !important;
+}
+
+@media (max-width: 1024px) {
+  .block6-info-phones .block6-info-value {
+    font-size: 0.875rem !important;
+  }
+  .block6-form-section {
+    padding: 0;
+    min-height: auto;
+    margin-bottom: 4rem !important;
+  }
+  
+  .block6-illustration {
+    min-height: 600px;
+    margin: 0;
+    padding: 0;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+  }
+  .block6-form-content {
+    width: 50%;
+    padding: 4rem 3rem;
+    min-height: 600px;
+  }
+  .block6-info-section {
+    padding: 5rem 1.5rem;
+    margin-top: 3rem;
+  }
+  .block6-info-cards {
+    gap: 1.5rem;
+  }
+  .block6-info-card {
+    min-width: 250px;
+  }
+  .block6-info-title {
+    font-size: 1.75rem !important;
+  }
+  .block6-title {
+    font-size: 2rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .block6-info-phones {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .block6-info-phones .block6-info-value {
+    font-size: 1rem !important;
+  }
+  .block6-info-section {
+    padding: 4rem 1rem;
+    margin-bottom: 0;
+    margin-top: 0;
+    width: 100%;
+  }
+  .block6-info-header {
+    text-align: center;
+    width: 100%;
+  }
+  .block6-info-cards {
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+  }
+  .block6-info-card {
+    width: 100%;
+    min-width: unset;
+  }
+  .block6-info-title {
+    font-size: 1.5rem !important;
+  }
+  .block6-container {
+    padding-top: 0;
+  }
+  .block6-form-section {
+    flex-direction: column;
+    padding: 0;
+    gap: 3rem;
+    margin: 0;
+    overflow: hidden;
+  }
+  .block6-form-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 2rem !important;
+    margin: 0 !important;
+    position: relative;
+    min-height: auto;
+    height: auto;
+    order: 2;
+  }
+  .block6-title {
+    font-size: 1.8rem !important;
+    text-align: center;
+    margin-top: 0 !important;
+  }
+  .block6-subtitle {
+    text-align: center;
+    margin-bottom: 2rem !important;
+  }
+  .block6-form {
+    gap: 1.5rem !important;
+  }
+  .submit-button {
+    align-self: center;
+    width: 100%;
+    margin-top: 1rem;
+  }
+  .block6-illustration {
+    width: 100vw;
+    height: 250px;
+    order: 1;
+  }
+}

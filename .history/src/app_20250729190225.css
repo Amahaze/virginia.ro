@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+  background-color: rgb(236, 243, 249);
+}
+
+.MuiBox-root {
+  display: block;
+}
+
+.MuiContainer-root {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}

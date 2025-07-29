@@ -1,0 +1,88 @@
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-75%);
+  }
+}
+
+.block2-container {
+  background-color: rgb(236, 243, 249);
+  padding: 3rem 0 2rem;
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.block2-title {
+  color: #6a6e70;
+  font-size: 1.5rem;
+  margin: 1rem 0 2.5rem;
+  text-align: center;
+}
+
+.sponsor-carousel {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 1rem 0;
+  white-space: nowrap;
+}
+
+.sponsor-track {
+  display: inline-flex;
+  animation: scroll 40s linear infinite;
+  width: max-content;
+}
+
+.sponsor-track:hover {
+  animation-play-state: paused;
+}
+
+.sponsor-image {
+  height: 80px;
+  width: auto;
+  margin: 0 4rem;
+  object-fit: contain;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.sponsor-image:hover {
+  filter: grayscale(0%);
+}
+
+@media (max-width: 960px) {
+  .block2-container {
+    padding: 2rem 0;
+  }
+
+  .block2-title {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .sponsor-image {
+    height: 60px;
+    margin: 0 3rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .block2-container {
+    padding: 1.5rem 0;
+  }
+
+  .block2-title {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .sponsor-image {
+    height: 50px;
+    margin: 0 2rem;
+  }
+}
