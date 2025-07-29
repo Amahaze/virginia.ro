@@ -1,0 +1,58 @@
+.block4-container {
+  background-color: rgb(236, 243, 249);
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.block4-content {
+  max-width: 800px;
+  text-align: left;
+  padding-left: 2rem;
+}
+
+.block4-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.block4-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.block4-button {
+  background-color: black;
+  color: white;
+  border: 2px solid black;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.block4-button:hover {
+  background-color: white;
+  color: black;
+}
+
+@media (max-width: 768px) {
+  .block4-container {
+    padding: 3rem 1rem;
+  }
+
+  .block4-title {
+    font-size: 1.75rem;
+  }
+
+  .block4-description {
+    font-size: 1rem;
+  }
+}

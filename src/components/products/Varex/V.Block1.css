@@ -1,0 +1,66 @@
+.varex-block1-container {
+  width: 100%;
+  background-color: rgb(236, 243, 249);
+  padding: 120px 0;
+}
+
+.varex-block1-hero-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.varex-block1-hero-content {
+  text-align: center;
+  max-width: 1200px;
+}
+
+.varex-block1-hero-image {
+  width: 800px;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.varex-block1-hero-title {
+  font-size: 2.5rem !important;
+  font-weight: 700 !important;
+  color: #333;
+  margin-bottom: 20px !important;
+}
+
+.varex-block1-hero-description {
+  font-size: 1.1rem !important;
+  line-height: 1.6 !important;
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto !important;
+  white-space: pre-line;
+}
+
+@media (max-width: 768px) {
+  .varex-block1-hero-title {
+    font-size: 2rem !important;
+  }
+
+  .varex-block1-hero-description {
+    font-size: 1rem !important;
+  }
+
+  .varex-block1-container {
+    padding: 40px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .varex-block1-hero-title {
+    font-size: 1.75rem !important;
+  }
+
+  .varex-block1-container {
+    padding: 30px 0;
+  }
+}
