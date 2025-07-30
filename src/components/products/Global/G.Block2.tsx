@@ -36,7 +36,7 @@ const Block2: React.FC = () => {
   return (
     <Box className="block2-section">
       <Box className="block2-container">
-        <Box className="block2-content" sx={{ display: 'flex', justifyContent: 'flex-start', gap: '2rem' }}>
+        <Box className="block2-content">
           <Box className="info-items">
             <Box className="info-item">
               <LocalShippingIcon className="info-icon" />
@@ -73,10 +73,8 @@ const Block2: React.FC = () => {
             </Box>
           </Box>
           <Box className="block2-images">
-            <Box className="image-container">
-              <img src={truckImage} alt="Delivery Truck" className="block2-image" />
-              <img src={cisternImage} alt="Storage Cistern" className="block2-image" />
-            </Box>
+            <img src={truckImage} alt="Delivery Truck" className="block2-image" />
+            <img src={cisternImage} alt="Storage Cistern" className="block2-image" />
           </Box>
         </Box>
       </Box>
