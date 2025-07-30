@@ -439,7 +439,7 @@
   }
 
   .contact-content {
-    flex-direction: column;
+    flex-direction: column-reverse;
     gap: 0;
     position: relative;
   }
@@ -473,9 +473,9 @@
   }
 
   .contact-image-container {
-    width: 100%;
+    width: 100vw;
     height: 250px;
-    margin: 0;
+    margin: 0 -1rem;
     border-radius: 0;
     background-position: center;
     background-size: cover;
