@@ -26,10 +26,18 @@ const Block1 = () => {
           {t('hero.subtitle', 'Echipamente certificate și parteneriate solide pentru performanță și siguranță în fiecare proiect.')}
         </Typography>
         <Box className="block1-buttons">
-          <Button variant="contained" className="block1-button about-button">
+          <Button
+            variant="contained"
+            className="block1-button about-button"
+            href="#about"
+          >
             {t('about')}
           </Button>
-          <Button variant="outlined" className="block1-button block1-contact-button">
+          <Button
+            variant="outlined"
+            className="block1-button block1-contact-button"
+            href="/contact"
+          >
             {t('contact')}
           </Button>
         </Box>
