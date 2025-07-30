@@ -435,17 +435,22 @@
   .contact-section {
     margin-top: 4rem;
     padding: 0;
+    position: relative;
   }
 
   .contact-content {
-    flex-direction: column-reverse;
-    gap: 2rem;
+    flex-direction: column;
+    gap: 0;
+    position: relative;
   }
 
   .contact-text {
     width: 100%;
     padding: 2rem;
     text-align: center;
+    position: relative;
+    z-index: 2;
+    background-color: rgb(236, 243, 249);
   }
 
   .contact-title {
@@ -469,10 +474,12 @@
 
   .contact-image-container {
     width: 100%;
-    min-height: 300px;
+    height: 250px;
     margin: 0;
     border-radius: 0;
     background-position: center;
     background-size: cover;
+    position: relative;
+    z-index: 1;
   }
 }
