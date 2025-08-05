@@ -1,0 +1,57 @@
+.block5-container {
+  background-color: rgb(236, 243, 249);
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.block5-content {
+  max-width: 800px;
+  text-align: left;
+  padding-left: 2rem;
+}
+
+.block5-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.block5-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.block5-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.block5-button:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .block5-container {
+    padding: 3rem 1rem;
+  }
+
+  .block5-title {
+    font-size: 1.75rem;
+  }
+
+  .block5-description {
+    font-size: 1rem;
+  }
+}

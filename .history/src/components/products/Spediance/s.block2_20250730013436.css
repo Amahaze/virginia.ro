@@ -1,0 +1,142 @@
+.s-block2-section {
+  padding: 6rem 20px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: rgb(236, 243, 249);
+}
+
+.s-block2-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.s-block2-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  width: 100%;
+}
+
+.s-block2-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.s-block2-info-box {
+  background-color: rgb(236, 243, 249);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column !important;
+  align-items: flex-start;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+}
+
+.s-block2-info-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.s-block2-info-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  flex-direction: row;
+}
+
+.s-block2-info-icon {
+  font-size: 30px !important;
+  color: #dd0a21 !important;
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+.s-block2-info-title {
+  font-size: 1.25rem !important;
+  font-weight: 600 !important;
+  color: #333;
+  margin: 0 !important;
+  flex-grow: 1;
+}
+
+.s-block2-info-description {
+  color: #666;
+  line-height: 1.6;
+  font-size: 1rem;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+/* Tablet Layout */
+@media (max-width: 960px) {
+  .s-block2-section {
+    padding: 4rem 1.5rem;
+  }
+
+  .s-block2-grid {
+    gap: 2rem;
+  }
+
+  .s-block2-row {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .s-block2-info-box {
+    padding: 1.5rem;
+  }
+
+  .s-block2-info-icon {
+    font-size: 40px !important;
+    margin-right: 1rem;
+    flex-shrink: 0;
+  }
+}
+
+/* Mobile Layout */
+@media (max-width: 600px) {
+  .s-block2-section {
+    padding: 3rem 1rem;
+  }
+
+  .s-block2-grid {
+    gap: 2rem;
+  }
+
+  .s-block2-row {
+    gap: 1.5rem;
+  }
+
+  .s-block2-info-box {
+    padding: 1.25rem 1.75rem;
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+  }
+
+  .s-block2-info-icon {
+    font-size: 28px !important;
+    margin-right: 0.75rem;
+    flex-shrink: 0;
+  }
+
+  .s-block2-info-title {
+    font-size: 1rem !important;
+    margin: 0 !important;
+  }
+
+  .s-block2-info-description {
+    font-size: 0.9rem;
+    margin-top: 0.75rem;
+    width: 100%;
+  }
+}

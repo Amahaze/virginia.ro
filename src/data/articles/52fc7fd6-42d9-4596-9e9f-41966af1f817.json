@@ -1,0 +1,18 @@
+{
+  "id": "52fc7fd6-42d9-4596-9e9f-41966af1f817",
+  "title": {
+    "ro": "Descarcare ",
+    "en": "downlaod",
+    "ru": "скачать"
+  },
+  "content": {
+    "ro": "Acuam ar trebuie cumvasa impelenta mca sa adaug si iamgini la rticole in 2 pozzitii dreapta sa us tanga , pe langa asta  terebuie si buton unde admin incarca de exemplu un fiel iar vizitaoru lapsaidn pe buton paote sa ldescarce",
+    "en": "Now we should somehow implement the option to add images to articles in two positions – right or left. Besides that, we also need a button where the admin can upload a file, and the visitor, by clicking the button, can download it",
+    "ru": "Теперь нужно как-то реализовать возможность добавлять изображения к статьям в двух позициях — справа или слева. Кроме того, нужен и кнопка, через которую администратор может загружать файл, а посетитель, нажав на неё, сможет его скачать"
+  },
+  "imageUrl": "/uploads/1753830545904-image.png",
+  "imagePosition": "left",
+  "attachmentUrl": "/uploads/1753830545906-Acc Tanki.txt",
+  "attachmentName": "Acc Tanki.txt",
+  "createdAt": "2025-07-29T23:09:05.914Z"
+}

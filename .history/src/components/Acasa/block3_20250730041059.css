@@ -1,0 +1,485 @@
+.block3-container {
+  background-color: rgb(236, 243, 249);
+  padding: 6rem 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.block3-title {
+  font-size: 2.5rem !important;
+  font-weight: bold !important;
+  color: #333;
+  margin-bottom: 2rem !important;
+  text-align: center;
+}
+
+.block3-description {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 2rem;
+  text-align: center;
+  color: #666;
+  line-height: 1.6;
+  font-size: 1.1rem;
+  margin-bottom: 6rem;
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.block3-description.animate {
+  animation: fadeInUp 1s ease forwards;
+}
+
+.block3-image-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.block3-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.advantages-section {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0 2rem;
+  margin: 12rem auto 0;
+}
+
+.advantages-content {
+  display: flex;
+  gap: 4rem;
+  align-items: flex-start;
+  margin-top: -0.5rem;
+}
+
+.advantages-left {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.advantages-image-container {
+  flex: 1;
+  max-width: 100%;
+  opacity: 0;
+  transform: translateX(-50px);
+}
+
+.advantages-image-container.animate {
+  animation: fadeInLeft 1s ease forwards;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.advantages-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  margin: 2rem 0;
+  max-height: 700px;
+}
+
+.advantages-list {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.advantages-title {
+  font-size: 2.5rem !important;
+  font-weight: bold !important;
+  color: #000;
+  margin: 1rem  0 !important;
+  text-align: left;
+}
+
+.advantage-item {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  background-color: #e0f0ee;
+  padding: 2rem;
+  border-radius: 12px;
+  opacity: 0;
+  transform: translateX(50px);
+}
+
+.advantage-item.animate {
+  animation: fadeInRight 1s ease forwards;
+}
+
+.advantage-item.animate:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.advantage-item.animate:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.advantage-item.animate:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.advantage-dot {
+  width: 16px;
+  height: 16px;
+  background-color: rgba(0, 191, 35, 0.45);
+  border-radius: 50%;
+  margin-top: 4px;
+}
+
+.advantage-content {
+  flex: 1;
+}
+
+.advantage-item-title {
+  font-size: 1.25rem !important;
+  font-weight: 600 !important;
+  color: #000;
+  margin-bottom: 1rem !important;
+}
+
+.advantage-item-description {
+  color: #666;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+.contact-section {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin: 8rem 0 0;
+  background-color: rgb(236, 243, 249);
+  padding: 3rem 0;
+}
+
+.contact-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  padding: 3rem;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.contact-text {
+  width: 50%;
+  padding: 0 4rem;
+  opacity: 0;
+  transform: translateX(-50px);
+}
+
+.contact-text.animate {
+  animation: fadeInLeft 1s ease forwards;
+}
+
+.contact-image-container {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('/src/assets/flaore.png');
+  background-size: cover;
+  background-position: right;
+  opacity: 0;
+  transform: translateX(50px);
+}
+
+.contact-image-container.animate {
+  animation: fadeInRight 1s ease forwards;
+}
+
+.contact-image {
+  display: none;
+}
+
+/* Tablet styles (601px - 960px) */
+@media (max-width: 960px) {
+  .block3-container {
+    padding: 4rem 0;
+  }
+
+  .block3-title {
+    font-size: 2rem !important;
+  }
+
+  .block3-description {
+    font-size: 1rem;
+    margin-bottom: 3rem;
+    padding: 2rem 1rem;
+  }
+
+  .advantages-section {
+    padding: 0 1.5rem;
+    gap: 2rem;
+    margin-top: 8rem;
+  }
+
+  .advantages-content {
+    flex-direction: row;
+    gap: 3rem;
+    margin-top: 0;
+    align-items: flex-start;
+  }
+
+  .advantages-left {
+    flex: 0 0 45%;
+  }
+
+  .advantages-title {
+    font-size: 2.5rem !important;
+    margin: 0 !important;
+    text-align: left;
+  }
+
+  .advantages-image-container {
+    max-width: 100%;
+    margin-top: 2rem;
+  }
+
+  .advantages-image {
+    margin: 0;
+    max-height: 400px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .advantages-list {
+    gap: 1.5rem;
+    flex: 1;
+  }
+
+  .advantage-item {
+    padding: 1.5rem;
+  }
+
+  .advantage-dot {
+    width: 24px;
+    height: 24px;
+  }
+
+  .advantage-item-title {
+    font-size: 1.2rem !important;
+  }
+
+  .advantage-item-description {
+    font-size: 1rem;
+  }
+}
+
+/* Tablet-specific contact section styles */
+@media (min-width: 601px) and (max-width: 960px) {
+  .contact-section {
+    margin-top: 6rem;
+    padding: 0 1.5rem;
+  }
+
+  .contact-content {
+    flex-direction: row;
+    gap: 2rem;
+    text-align: left;
+  }
+
+  .contact-text {
+    width: 50%;
+    padding: 0 2rem;
+  }
+
+  .contact-title {
+    font-size: 2.5rem !important;
+  }
+
+  .contact-subtitle {
+    font-size: 1.1rem !important;
+  }
+
+  .contact-image-container {
+    width: 50%;
+    min-height: 400px;
+  }
+}
+
+/* Mobile styles (max-width: 600px) */
+@media (max-width: 600px) {
+  .block3-container {
+    padding: 3rem 0;
+  }
+
+  .block3-title {
+    font-size: 1.75rem !important;
+  }
+
+  .block3-description {
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+    padding: 2rem 1.5rem;
+  }
+
+  .block3-image-container {
+    padding: 0;
+    max-width: 100%;
+  }
+
+  .block3-image {
+    width: 100%;
+    height: 25vh;
+    max-height: none;
+    border-radius: 0;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .advantages-section {
+    padding: 0 1rem;
+    margin-top: 4rem;
+  }
+
+  .advantages-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .advantages-left {
+    flex: none;
+    width: 100%;
+  }
+
+  .advantages-title {
+    font-size: 2rem !important;
+    margin-bottom: 1.5rem !important;
+    text-align: center;
+  }
+
+  .advantages-image-container {
+    max-width: 100%;
+    margin-top: 0;
+  }
+
+  .advantages-image {
+    max-height: 300px;
+  }
+
+  .advantages-list {
+    gap: 1.25rem;
+  }
+
+  .advantage-item {
+    padding: 1.25rem;
+  }
+
+  .advantage-dot {
+    width: 20px;
+    height: 20px;
+  }
+
+  .advantage-item-title {
+    font-size: 0.95rem !important;
+  }
+
+  .advantage-item-description {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .contact-section {
+    margin-top: 4rem;
+    padding: 0;
+    position: relative;
+  }
+
+  .contact-content {
+    flex-direction: column-reverse;
+    gap: 0;
+    position: relative;
+  }
+
+  .contact-text {
+    width: 100%;
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    background-color: rgb(236, 243, 249);
+  }
+
+  .contact-title {
+    font-size: 2rem !important;
+    margin-bottom: 1rem !important;
+    text-align: center;
+  }
+
+  .contact-subtitle {
+    font-size: 1rem !important;
+    margin-bottom: 1.5rem !important;
+    text-align: center;
+  }
+
+  .contact-button {
+    width: 100%;
+    padding: 0.875rem !important;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .contact-image-container {
+    width: 100vw;
+    height: 500;
+    margin: 0 -1rem;
+    border-radius: 0;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+  }
+}
