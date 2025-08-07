@@ -4,7 +4,7 @@ import emailjs from 'emailjs-com';
 interface EmailConfig {
   serviceId: string;
   templateId: string;
-  publicKey: string;
+  userId: string;
 }
 
 // Email parameters interface
@@ -19,9 +19,9 @@ interface EmailParams extends Record<string, unknown> {
 // Load environment variables with type checking
 const getEmailConfig = (): EmailConfig => {
   const config: EmailConfig = {
-    serviceId: import.meta.env.VITE_EMAILJS_SERVICE_ID,
-    templateId: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-    publicKey: import.meta.env.VITE_EMAILJS_USER_ID,
+    serviceId: import.meta.env.VITE_EMAILJS_SERVICE_ID as string,
+    templateId: import.meta.env.VITE_EMAILJS_TEMPLATE_ID as string,
+    userId: import.meta.env.VITE_EMAILJS_USER_ID as string,
   };
 
   // Validate configuration
@@ -34,26 +34,17 @@ const getEmailConfig = (): EmailConfig => {
   return config;
 };
 
-// Initialize EmailJS with configuration
-const initializeEmailJS = (publicKey: string): void => {
-  try {
-    emailjs.init(publicKey);
-  } catch (error) {
-    console.error('Failed to initialize EmailJS:', error);
-    throw new Error('Failed to initialize EmailJS service. Please verify your public key.');
-  }
-};
-
 export const sendEmail = async (params: EmailParams): Promise<void> => {
   try {
     const config = getEmailConfig();
     
-    // Initialize EmailJS
-    initializeEmailJS(config.publicKey);
+    // Initialize EmailJS before sending
+    emailjs.init(config.userId);
     
     console.log('Sending email with params:', {
       serviceId: config.serviceId,
       templateId: config.templateId,
+      userId: config.userId,
       params
     });
 
@@ -67,10 +58,6 @@ export const sendEmail = async (params: EmailParams): Promise<void> => {
     return Promise.resolve();
   } catch (error) {
     console.error('Error sending email:', error);
-    if (error instanceof Error) {
-      // Throw the error with its original message for better debugging
-      throw new Error(`EmailJS error: ${error.message}`);
-    }
-    throw new Error('An unexpected error occurred while sending the email.');
+    return Promise.reject(error);
   }
 };

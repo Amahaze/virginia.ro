@@ -6,12 +6,9 @@
     "skipLibCheck": true,
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
-    "emitDeclarationOnly": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": false,
-    "declaration": true,
-    "declarationDir": "./dist/types",
+    "noEmit": true,
     "jsx": "react-jsx",
     "strict": true,
     "noUnusedLocals": true,
@@ -23,6 +20,6 @@
     "forceConsistentCasingInFileNames": true
   },
   "include": ["src/**/*"],
-  "exclude": ["src/server/**/*", "node_modules", "dist"],
+  "exclude": ["src/server/**/*", "**/*.d.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

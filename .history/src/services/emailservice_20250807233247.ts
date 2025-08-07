@@ -4,7 +4,7 @@ import emailjs from 'emailjs-com';
 interface EmailConfig {
   serviceId: string;
   templateId: string;
-  publicKey: string;
+  userId: string;
 }
 
 // Email parameters interface
@@ -21,7 +21,7 @@ const getEmailConfig = (): EmailConfig => {
   const config: EmailConfig = {
     serviceId: import.meta.env.VITE_EMAILJS_SERVICE_ID,
     templateId: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-    publicKey: import.meta.env.VITE_EMAILJS_USER_ID,
+    userId: import.meta.env.VITE_EMAILJS_USER_ID,
   };
 
   // Validate configuration
@@ -44,12 +44,47 @@ const initializeEmailJS = (publicKey: string): void => {
   }
 };
 
+// Validate EmailJS configuration
+const validateEmailConfig = async (config: EmailConfig): Promise<void> => {
+  try {
+    // Test if the service exists
+    const serviceResponse = await fetch(`https://api.emailjs.com/api/v1.0/email/services/${config.serviceId}`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${config.userId}`
+      }
+    });
+    if (!serviceResponse.ok) {
+      throw new Error(`Invalid service ID: ${config.serviceId}. Please verify your EmailJS service configuration.`);
+    }
+
+    // Test if the template exists
+    const templateResponse = await fetch(`https://api.emailjs.com/api/v1.0/email/templates/${config.templateId}`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${config.userId}`
+      }
+    });
+    if (!templateResponse.ok) {
+      throw new Error(`Invalid template ID: ${config.templateId}. Please verify your EmailJS template configuration.`);
+    }
+  } catch (error) {
+    console.error('EmailJS configuration validation failed:', error);
+    throw error;
+  }
+};
+
 export const sendEmail = async (params: EmailParams): Promise<void> => {
   try {
     const config = getEmailConfig();
     
     // Initialize EmailJS
-    initializeEmailJS(config.publicKey);
+    initializeEmailJS(config.userId);
+    
+    // Validate configuration before sending
+    await validateEmailConfig(config);
     
     console.log('Sending email with params:', {
       serviceId: config.serviceId,
