@@ -22,15 +22,15 @@ const createServer = () => {
     mkdirSync(uploadsDir, { recursive: true });
   }
 
-  // Serve index.html for all routes except API
+  // API routes first
+  app.use('/api/articles', articlesRouter);
+
+  // Then serve index.html for client routes
   app.get('*', (req, res) => {
-    if (!req.path.startsWith('/api')) {
-      res.sendFile(path.join(process.cwd(), 'dist', 'index.html'));
-    }
+    res.sendFile(path.join(process.cwd(), 'dist', 'index.html'));
   });
 
-  // API routes
-  app.use('/api/articles', articlesRouter);
+
 
   // Error handling middleware
   app.use((err: Error, req: Request, res: Response, next: NextFunction) => {

@@ -55,13 +55,14 @@ const Stiri = () => {
     } catch (err) {
       setError('Failed to load articles. Please try again later.');
       console.error('Error loading articles:', err);
+      setNewsArticles([]);
     } finally {
       setLoading(false);
     }
   };
 
   const handleLogin = () => {
-    if (username === 'admin' && password === '1234') {
+    if (username === 'verginia-admin' && password === 'verginia1!') {
       setIsAdmin(true);
       setShowLogin(false);
       setLoginError('');

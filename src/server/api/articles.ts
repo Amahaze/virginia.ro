@@ -10,8 +10,6 @@ export type { NewsArticle };
 
 const router = express.Router();
 
-export default router;
-
 const ARTICLES_DIR = path.join(process.cwd(), 'src', 'data', 'articles');
 
 // Ensure articles directory exists
@@ -39,13 +37,21 @@ router.get('/', async (req, res) => {
       files
         .filter(file => file.endsWith('.json'))
         .map(async file => {
-          const content = await fs.readFile(path.join(ARTICLES_DIR, file), 'utf-8');
-          return JSON.parse(content) as NewsArticle;
+          try {
+            const content = await fs.readFile(path.join(ARTICLES_DIR, file), 'utf-8');
+            return JSON.parse(content) as NewsArticle;
+          } catch (error) {
+            console.error(`Error reading/parsing article ${file}:`, error);
+            return null;
+          }
         })
     );
+
+    // Filter out any null articles from failed parsing
+    const validArticles = articles.filter((article): article is NewsArticle => article !== null);
     
     // Sort articles by creation date, newest first
-    const sortedArticles = articles.sort((a: NewsArticle, b: NewsArticle) => 
+    const sortedArticles = validArticles.sort((a, b) => 
       new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
     );
 
@@ -165,3 +171,5 @@ router.delete('/:id', async (req, res) => {
     res.status(500).json({ error: 'Failed to delete article' });
   }
 });
+
+export default router;

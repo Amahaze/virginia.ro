@@ -1,6 +1,6 @@
 import { type NewsArticle } from '../components/Stiri/Stiri';
 
-const API_URL = 'http://localhost:3001/api';
+const API_URL = '/api';
 
 export const fetchArticles = async (): Promise<NewsArticle[]> => {
   try {
@@ -9,7 +9,7 @@ export const fetchArticles = async (): Promise<NewsArticle[]> => {
     return await response.json();
   } catch (error) {
     console.error('Error fetching articles:', error);
-    return [];
+    throw error;
   }
 };
 

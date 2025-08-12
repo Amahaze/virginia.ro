@@ -28,10 +28,10 @@ const Navbar = () => {
       <Toolbar className="toolbar">
         <Box className="logo">
           <picture>
-            <source media="(max-width: 600px)" srcSet="/src/assets/Logo-1.png" />
-            <source media="(min-width: 601px) and (max-width: 960px)" srcSet="/src/assets/Logo-2.png" />
-            <source media="(min-width: 961px)" srcSet="/src/assets/Logo.png" />
-            <img src="/src/assets/Logo.png" alt="Verginia" />
+            <source media="(max-width: 600px)" srcSet="/Logo-1.png" />
+            <source media="(min-width: 601px) and (max-width: 960px)" srcSet="/Logo-2.png" />
+            <source media="(min-width: 961px)" srcSet="/Logo.png" />
+            <img src="/Logo.png" alt="Verginia" />
           </picture>
           <span>Verginia</span>
         </Box>
@@ -169,7 +169,7 @@ const Navbar = () => {
                   </svg>
                 </IconButton>
                 <Box className="mobile-logo" sx={{ width: '24px', height: '24px' }}>
-                  <img src="/src/assets/Logo-1.png" alt="Verginia Logo" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+                  <img src="/Logo-1.png" alt="Verginia Logo" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
                 </Box>
               </Box>
               <MenuItem 
