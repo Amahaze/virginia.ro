@@ -3,7 +3,9 @@ import { Box, Typography, Button } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import './Block3.css';
 import laborantImage from '../../assets/laborant.png';
-import peopleImage from '../../assets/people-home.png';
+import moldanTeamImage from '../../assets/moldanTeam.png';
+import moldanBioImage from '../../assets/moldanBio.png';
+import moldanTechImage from '../../assets/moldanTech.png';
 import floareImage from '../../assets/flaore.png';
 
 const Block3 = () => {
@@ -67,7 +69,15 @@ const Block3 = () => {
           {t('block3.description')}
         </Typography>
         <Box className="block3-image-container">
-          <img src={peopleImage} alt="Team" className="block3-image" />
+          <img src={moldanTeamImage} alt="Team" className="block3-image" />
+        </Box>
+        <Box className="additional-images-container">
+          <Box className="additional-image-wrapper">
+            <img src={moldanBioImage} alt="Bio" className="additional-image" />
+          </Box>
+          <Box className="additional-image-wrapper">
+            <img src={moldanTechImage} alt="Tech" className="additional-image" />
+          </Box>
         </Box>
       </Box>
 
